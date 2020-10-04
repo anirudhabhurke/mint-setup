@@ -4,6 +4,7 @@ echo 'Removing Firefox LibreOffice hexchat Thunderbird warpinator drawing'
 sudo apt-get purge firefox libreoffice* hexchat thunderbird* warpinator drawing -y
 sudo rm -Rf /etc/firefox/
 sudo rm -Rf /usr/lib/firefox*
+sudo rm -Rf ~/.mozilla
 
 echo 'Installing git'
 sudo apt install git -y
