@@ -37,6 +37,13 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ foreground-color '#f8f8f8'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ cursor-shape 'ibeam'
 gsettings set org.cinnamon.desktop.background picture-options 'none'
+gsettings set org.cinnamon alttab-switcher-delay 0
+gsettings set org.cinnamon.sounds switch-enabled false
+
+echo 'Setting up Indian Time'
+timedatectl set-timezone Asia/Kolkata
+timedatectl set-local-rtc 1 --adjust-system-clock
+gsettings set org.cinnamon.desktop.interface clock-use-24h false
 
 echo 'Installing Brave Browser'
 sudo apt install apt-transport-https curl -y
@@ -44,11 +51,6 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install brave-browser -y
-
-echo 'Setting up Indian Time'
-timedatectl set-timezone Asia/Kolkata
-timedatectl set-local-rtc 1 --adjust-system-clock
-gsettings set org.cinnamon.desktop.interface clock-use-24h false
 
 echo 'Installing Visual Studio Code'
 sudo apt update
