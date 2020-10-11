@@ -39,10 +39,16 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 gsettings set org.cinnamon.desktop.background picture-options 'none'
 gsettings set org.cinnamon alttab-switcher-delay 0
 gsettings set org.cinnamon.sounds switch-enabled false
+gsettings set org.cinnamon.desktop.sound volume-sound-enabled false
+gsettings set org.cinnamon.sounds tile-enabled false
+gsettings set org.cinnamon.sounds login-enabled false
+gsettings set org.cinnamon.sounds logout-enabled false
+gsettings set org.x.editor.preferences.editor tabs-size uint32 6
+
 
 echo 'Setting up Indian Time'
 timedatectl set-timezone Asia/Kolkata
-timedatectl set-local-rtc 1 --adjust-system-clock
+#timedatectl set-local-rtc 1 --adjust-system-clock
 gsettings set org.cinnamon.desktop.interface clock-use-24h false
 
 echo 'Installing Brave Browser'
@@ -62,6 +68,9 @@ sudo apt install code -y
 
 echo 'Installing Cascadia Code Fonts'
 sudo apt install fonts-cascadia-code -y
+
+echo 'Installing vim editor'
+sudo apt-get install vim -y
 
 echo 'Installing TLP'
 sudo add-apt-repository ppa:linrunner/tlp -y
@@ -86,6 +95,7 @@ echo 'export PATH=$PATH:$ANDROID_HOME/emulator' >> ~/.bashrc
 echo 'export PATH=$PATH:$ANDROID_HOME/tools' >> ~/.bashrc
 echo 'export PATH=$PATH:$ANDROID_HOME/tools/bin' >> ~/.bashrc
 echo 'export PATH=$PATH:$ANDROID_HOME/platform-tools' >> ~/.bashrc
+echo 'alias cls="clear"' >> ~/.bashrc
 
 echo 'Installing Node.js'
 curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
