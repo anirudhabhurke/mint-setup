@@ -67,7 +67,13 @@ sudo apt update
 sudo apt install code -y
 
 echo 'Installing Cascadia Code Fonts'
-sudo apt install fonts-cascadia-code -y
+LOCATION=$(curl -s https://api.github.com/repos/microsoft/cascadia-code/releases/latest | grep browser_download_url | cut -d '"' -f 4)
+curl -L -o fonts.zip $LOCATION
+unzip fonts.zip
+mkdir ~/.local/share/fonts
+find ttf/ -maxdepth 1 -type f -print0 | xargs -0 mv -t ~/.local/share/fonts
+fc-cache -f -v
+rm -rf fonts.zip ttf otf woff2
 
 echo 'Installing vim editor'
 sudo apt-get install vim -y
