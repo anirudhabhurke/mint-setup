@@ -14,7 +14,7 @@ sudo add-apt-repository ppa:papirus/papirus -y
 sudo apt-get update -y
 sudo apt-get install papirus-icon-theme -y
 
-echo 'Setting theme'
+echo 'Setting Desktop'
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.theme name "Mint-Y-Dark-Blue"
 gsettings set org.cinnamon.desktop.interface gtk-theme "Mint-Y-Dark-Blue"
@@ -113,6 +113,7 @@ echo 'Optimizing things'
 sudo apt-get autoclean
 sudo apt-get clean
 sudo apt-get autoremove
+sudo ufw logging off
 
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ font 'Cascadia Code PL Regular 12'
 echo 'Done!'
