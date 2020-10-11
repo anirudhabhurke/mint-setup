@@ -45,7 +45,6 @@ gsettings set org.cinnamon.sounds login-enabled false
 gsettings set org.cinnamon.sounds logout-enabled false
 gsettings set org.x.editor.preferences.editor tabs-size uint32 6
 
-
 echo 'Setting up Indian Time'
 timedatectl set-timezone Asia/Kolkata
 #timedatectl set-local-rtc 1 --adjust-system-clock
