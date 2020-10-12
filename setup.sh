@@ -114,6 +114,7 @@ sudo apt-get autoclean
 sudo apt-get clean
 sudo apt-get autoremove
 sudo ufw logging off
+sudo rm -rf /usr/share/icons/Mint*
 
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ font 'Cascadia Code PL Regular 12'
 echo 'Done!'
