@@ -44,6 +44,9 @@ gsettings set org.cinnamon.sounds tile-enabled false
 gsettings set org.cinnamon.sounds login-enabled false
 gsettings set org.cinnamon.sounds logout-enabled false
 gsettings set org.x.editor.preferences.editor tabs-size uint32 6
+gsettings set org.nemo.desktop computer-icon-visible false
+gsettings set org.nemo.desktop trash-icon-visible true
+gsettings set org.nemo.desktop home-icon-visible true
 
 echo 'Setting up Indian Time'
 timedatectl set-timezone Asia/Kolkata
@@ -110,11 +113,11 @@ export NVM_DIR="$HOME/.nvm"
 nvm install --lts
 
 echo 'Optimizing things'
+sudo rm -rf /usr/share/icons/Mint*
 sudo apt-get autoclean
 sudo apt-get clean
 sudo apt-get autoremove
 sudo ufw logging off
-sudo rm -rf /usr/share/icons/Mint*
 
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ font 'Cascadia Code PL Regular 12'
-echo 'Done!'
+echo 'Done! Please restart terminal'
