@@ -47,6 +47,10 @@ gsettings set org.x.editor.preferences.editor tabs-size uint32 6
 gsettings set org.nemo.desktop computer-icon-visible false
 gsettings set org.nemo.desktop trash-icon-visible true
 gsettings set org.nemo.desktop home-icon-visible true
+gsettings set org.cinnamon.muffin desktop-effects false
+gsettings set org.cinnamon desktop-effects-on-menus false
+gsettings set org.cinnamon desktop-effects-on-dialogs false
+gsettings set org.cinnamon startup-animation false
 
 echo 'Setting up Indian Time'
 timedatectl set-timezone Asia/Kolkata
