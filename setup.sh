@@ -13,6 +13,7 @@ echo 'Installing Papirus Icon theme'
 sudo add-apt-repository ppa:papirus/papirus -y
 sudo apt-get update -y
 sudo apt-get install papirus-icon-theme -y
+sudo apt-get install breeze-cursor-theme -y
 
 echo 'Setting Desktop'
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
@@ -20,6 +21,7 @@ gsettings set org.cinnamon.theme name "Mint-Y-Dark-Blue"
 gsettings set org.cinnamon.desktop.interface gtk-theme "Mint-Y-Dark-Blue"
 gsettings set org.cinnamon.desktop.wm.preferences theme "Mint-Y-Dark"
 gsettings set org.cinnamon.desktop.interface icon-theme 'Papirus-Dark'
+gsettings set org.cinnamon.desktop.interface cursor-theme 'Breeze_Snow'
 gsettings set org.cinnamon workspace-osd-visible false
 gsettings set org.cinnamon.muffin tile-maximize true
 gsettings set org.cinnamon.desktop.notifications bottom-notifications true
