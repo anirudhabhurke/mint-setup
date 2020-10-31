@@ -1,6 +1,7 @@
 ## Linux Mint Setup
 
-Direct command => `wget -qO- https://git.io/JUxiR | sh`
+Direct command,
+`wget -qO- https://git.io/JUxiR | sh`
 
 OR
 
