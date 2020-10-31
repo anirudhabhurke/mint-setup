@@ -118,6 +118,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 nvm install --lts
 
+echo 'Installing Open Sans Font'
+sudo apt-get install -y fonts-open-sans
+
 echo 'Optimizing things'
 sudo rm -rf /usr/share/icons/Mint*
 sudo apt-get autoclean
@@ -125,5 +128,9 @@ sudo apt-get clean
 sudo apt-get autoremove
 sudo ufw logging off
 
+echo 'Applying Fonts'
+gsettings set org.cinnamon.desktop.interface font-name 'Open Sans 10'
+gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Open Sans Semi-Bold 10'
+gsettings set org.nemo.desktop font 'Open Sans 10'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ font 'Cascadia Code PL Regular 12'
-echo 'Done! Please restart terminal'
+echo 'Done! Please close this terminal instance'
