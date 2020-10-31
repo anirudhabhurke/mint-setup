@@ -54,6 +54,9 @@ gsettings set org.cinnamon desktop-effects-on-menus false
 gsettings set org.cinnamon desktop-effects-on-dialogs false
 gsettings set org.cinnamon startup-animation false
 
+echo 'Installing Open Sans Font'
+sudo apt-get install -y fonts-open-sans
+
 echo 'Setting up Indian Time'
 timedatectl set-timezone Asia/Kolkata
 #timedatectl set-local-rtc 1 --adjust-system-clock
@@ -117,9 +120,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 nvm install --lts
-
-echo 'Installing Open Sans Font'
-sudo apt-get install -y fonts-open-sans
 
 echo 'Optimizing things'
 sudo rm -rf /usr/share/icons/Mint*
