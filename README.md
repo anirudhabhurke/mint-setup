@@ -1,6 +1,8 @@
 ## Linux Mint Setup
 
-To run,
+Direct command => `wget -qO- https://git.io/JUxiR | sh`
+
+OR
 
 `chmod +x setup.sh`
 
