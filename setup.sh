@@ -6,9 +6,6 @@ sudo rm -Rf /etc/firefox/
 sudo rm -Rf /usr/lib/firefox*
 sudo rm -Rf ~/.mozilla
 
-echo 'Installing git'
-sudo apt install git -y
-
 echo 'Installing Papirus Icon theme'
 sudo add-apt-repository ppa:papirus/papirus -y
 sudo apt-get update -y
@@ -53,6 +50,7 @@ gsettings set org.cinnamon.muffin desktop-effects false
 gsettings set org.cinnamon desktop-effects-on-menus false
 gsettings set org.cinnamon desktop-effects-on-dialogs false
 gsettings set org.cinnamon startup-animation false
+gsettings set org.cinnamon.settings-daemon.peripherals.mouse middle-button-enabled false
 
 echo 'Installing Open Sans Font'
 sudo apt-get install -y fonts-open-sans
@@ -68,6 +66,12 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install brave-browser -y
+
+echo 'Installing Ungoogled Chromium Browser'
+echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /' | sudo tee /etc/apt/sources.list.d/home-ungoogled_chromium.list > /dev/null
+curl -s 'https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/Release.key' | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home-ungoogled_chromium.gpg > /dev/null
+sudo apt update
+sudo apt install -y ungoogled-chromium
 
 echo 'Installing Visual Studio Code'
 sudo apt update
@@ -85,6 +89,9 @@ mkdir ~/.local/share/fonts
 find ttf/ -maxdepth 1 -type f -print0 | xargs -0 mv -t ~/.local/share/fonts
 fc-cache -f -v
 rm -rf fonts.zip ttf otf woff2
+
+echo 'Installing git'
+sudo apt install git -y
 
 echo 'Installing vim editor'
 sudo apt-get install vim -y
@@ -130,7 +137,7 @@ sudo ufw logging off
 
 echo 'Applying Fonts'
 gsettings set org.cinnamon.desktop.interface font-name 'Open Sans 10'
-gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Open Sans Semi-Bold 10'
+#gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Open Sans Semi-Bold 10'
 gsettings set org.nemo.desktop font 'Open Sans 10'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ font 'Cascadia Code PL Regular 12'
 echo 'Done! Please close this terminal instance'
