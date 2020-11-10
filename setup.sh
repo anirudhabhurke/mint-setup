@@ -15,7 +15,7 @@ sudo apt-get install papirus-folders -y
 
 echo 'Setting Desktop'
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
-gsettings set org.cinnamon.theme name "Mint-Y-Dark-Blue"
+gsettings set org.cinnamon.theme name "Mint-Y-Dark-Teal"
 gsettings set org.cinnamon.desktop.interface gtk-theme "Mint-Y-Dark-Teal"
 gsettings set org.cinnamon.desktop.wm.preferences theme "Mint-Y-Dark"
 gsettings set org.cinnamon.desktop.interface icon-theme 'Papirus-Dark'
