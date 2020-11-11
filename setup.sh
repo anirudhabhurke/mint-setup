@@ -53,6 +53,10 @@ gsettings set org.cinnamon desktop-effects-on-menus false
 gsettings set org.cinnamon desktop-effects-on-dialogs false
 gsettings set org.cinnamon startup-animation false
 gsettings set org.cinnamon.settings-daemon.peripherals.mouse middle-button-enabled false
+gsettings set org.nemo.preferences tooltips-on-desktop true
+gsettings set org.nemo.preferences tooltips-in-icon-view true
+gsettings set org.nemo.preferences tooltips-in-list-view true
+gsettings set org.nemo.preferences tooltips-show-file-type true
 
 echo 'Installing Open Sans Font'
 sudo apt-get install -y fonts-open-sans
@@ -142,4 +146,4 @@ gsettings set org.cinnamon.desktop.interface font-name 'Open Sans 10'
 #gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Open Sans Semi-Bold 10'
 gsettings set org.nemo.desktop font 'Open Sans 10'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ font 'Cascadia Code PL Regular 12'
-echo 'Done! Please close this terminal instance'
+echo 'Done!'
