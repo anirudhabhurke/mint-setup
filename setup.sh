@@ -73,11 +73,11 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable ma
 sudo apt update
 sudo apt install brave-browser -y
 
-echo 'Installing Ungoogled Chromium Browser'
-echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /' | sudo tee /etc/apt/sources.list.d/home-ungoogled_chromium.list > /dev/null
-curl -s 'https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/Release.key' | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home-ungoogled_chromium.gpg > /dev/null
-sudo apt update
-sudo apt install -y ungoogled-chromium
+#echo 'Installing Ungoogled Chromium Browser'
+#echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /' | sudo tee /etc/apt/sources.list.d/home-ungoogled_chromium.list > /dev/null
+#curl -s 'https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/Release.key' | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home-ungoogled_chromium.gpg > /dev/null
+#sudo apt update
+#sudo apt install -y ungoogled-chromium
 
 echo 'Installing Visual Studio Code'
 sudo apt update
@@ -146,4 +146,5 @@ gsettings set org.cinnamon.desktop.interface font-name 'Open Sans 10'
 #gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Open Sans Semi-Bold 10'
 gsettings set org.nemo.desktop font 'Open Sans 10'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ font 'Cascadia Code PL Regular 12'
+echo ''
 echo 'Done!'
