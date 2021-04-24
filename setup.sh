@@ -87,14 +87,15 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo apt update
 sudo apt install code -y
 
-echo 'Installing Cascadia Code Fonts'
-LOCATION=$(curl -s https://api.github.com/repos/microsoft/cascadia-code/releases/latest | grep browser_download_url | cut -d '"' -f 4)
-curl -L -o fonts.zip $LOCATION
-unzip fonts.zip
-mkdir ~/.local/share/fonts
-find ttf/ -maxdepth 1 -type f -print0 | xargs -0 mv -t ~/.local/share/fonts
-fc-cache -f -v
-rm -rf fonts.zip ttf otf woff2
+# echo 'Installing Cascadia Code Fonts'
+# LOCATION=$(curl -s https://api.github.com/repos/microsoft/cascadia-code/releases/latest | grep browser_download_url | cut -d '"' -f 4)
+# curl -L -o fonts.zip $LOCATION
+# unzip fonts.zip
+# mkdir ~/.local/share/fonts
+# find ttf/ -maxdepth 1 -type f -print0 | xargs -0 mv -t ~/.local/share/fonts
+# fc-cache -f -v
+# rm -rf fonts.zip ttf otf woff2
+sudo apt install fonts-firacode
 
 echo 'Installing git'
 sudo apt install git -y
@@ -145,6 +146,6 @@ echo 'Applying Fonts'
 gsettings set org.cinnamon.desktop.interface font-name 'Open Sans 10'
 #gsettings set org.cinnamon.desktop.wm.preferences titlebar-font 'Open Sans Semi-Bold 10'
 gsettings set org.nemo.desktop font 'Open Sans 10'
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ font 'Cascadia Code PL Regular 12'
+# gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ font 'Cascadia Code PL Regular 12'
 echo ''
 echo 'Done!'
