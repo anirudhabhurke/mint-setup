@@ -87,6 +87,12 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo apt update
 sudo apt install code -y
 
+echo 'Installing Sublime Text'
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
+
 # echo 'Installing Cascadia Code Fonts'
 # LOCATION=$(curl -s https://api.github.com/repos/microsoft/cascadia-code/releases/latest | grep browser_download_url | cut -d '"' -f 4)
 # curl -L -o fonts.zip $LOCATION
