@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo 'Removing Firefox LibreOffice hexchat Thunderbird warpinator drawing'
-sudo apt-get purge firefox libreoffice* hexchat thunderbird* warpinator drawing -y
+echo 'Removing Firefox LibreOffice hexchat Thunderbird warpinator drawing hyptonix'
+sudo apt-get purge firefox libreoffice* hexchat thunderbird* warpinator drawing hyptonix -y
 sudo rm -Rf /etc/firefox/
 sudo rm -Rf /usr/lib/firefox*
 sudo rm -Rf ~/.mozilla
@@ -17,7 +17,7 @@ echo 'Setting Desktop'
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.cinnamon.theme name "Mint-Y-Dark-Teal"
 gsettings set org.cinnamon.desktop.interface gtk-theme "Mint-Y-Dark-Teal"
-gsettings set org.cinnamon.desktop.wm.preferences theme "Mint-Y-Dark"
+gsettings set org.cinnamon.desktop.wm.preferences theme "Mint-Y"
 gsettings set org.cinnamon.desktop.interface icon-theme 'Papirus-Dark'
 gsettings set org.cinnamon.desktop.interface cursor-theme 'Breeze_Snow'
 papirus-folders -C teal --theme Papirus-Dark
