@@ -1,6 +1,6 @@
 ## Linux Mint Setup
 
-Direct command,
+Setup For Linux Mint
 
 `wget -qO- https://git.io/JUxiR | sh`
 
